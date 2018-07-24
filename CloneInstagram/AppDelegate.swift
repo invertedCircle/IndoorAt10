@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        rememberUser() //function callled in the appplication wel  l...function
+        
+        let config = ParseClientConfiguration { (ParseMutableClientConfiguration)in //parse client configuration
+            
+            ParseMutableClientConfiguration.applicationId = "ee97b74a0ab7a8417704a2c2e6521c739f5b4965"
+            ParseMutableClientConfiguration.clientKey = "7ecee1698bbff1a2307df17110c3a6caee39e7c9"
+            ParseMutableClientConfiguration.server = "http://18.222.178.137:80/parse"
+        }
+        
+        
+        ///// PARSE CONFIGURATION BEGINS ////////
+        Parse.initialize(with: config) // initialise connection to server with config
+        
+        let defaultACL = PFACL()  // define access-levels for database
+        
+        defaultACL.hasPublicReadAccess = true // read from datatabase
+        defaultACL.hasPublicWriteAccess = true // write from the database
+        
+        PFACL.setDefault(defaultACL, withAccessForCurrentUser: true)
+
+        
+        
         return true
+        
+        ///// PARSE CONFIGURATION CONCLUDED ////////
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -41,6 +66,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func rememberUser(){ //code to rememeber user everytime app is closed. Does not have to log back in
+        
+        let user : String? = UserDefaults.standard.string(forKey: "username") //string username is inherited from class on homepage
+        
+        if user != nil {
+            
+            let board : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let tabBar = board.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController //casts the tabBar from storyboard usin the "tabBar" identifier
+            
+            window?.rootViewController = tabBar
+            
+        }
+        }
+        
+    }
 
-}
 
