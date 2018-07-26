@@ -23,7 +23,7 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         postImage.addGestureRecognizer(gestureReceogniser)
         
     }
-    
+//
     @objc func hideKeyboard() {
         self.view.endEditing(true)
         
@@ -44,43 +44,50 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         self.dismiss(animated: true, completion: nil)
     }
     
+//    @IBOutlet weak var postImage: UIImageView!
+    //@IBOutlet weak var postCommentText: UITextView!
+
+    
+    
+//    @IBAction func postButtonClicked(_ sender: Any) {
+//
+//     let object = PFObject(className: "Posts")
+//
+//        let data = UIImageJPEGRepresentation(postImage.image!, 0.5)
+//        let pfImage = PFFile(name: "image.jpg", data: data!)
+//
+//        object["postimage"] = pfImage
+//        object["postcomment"] = postCommentText.text
+//        object["postowner"] = PFUser.current()!.username!
+//
+//       let uuid = UUID().uuidString
+//
+//       object["postuuid"] = "\(uuid) \(PFUser.current()!.username!)"
+//
+//       object.saveInBackground { (success, error) in
+//        if error != nil{
+//
+//            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+//            let okButton = UIAlertAction(title: "OK", style:UIAlertActionStyle.cancel, handler: nil)
+//            alert.addAction(okButton)
+//            self.present(alert, animated: true, completion: nil)
+//        }
+//        else{
+//            self.postCommentText.text = ""
+//            self.postImage.image = UIImage(named: "select.png")
+//            self.tabBarController?.selectedIndex = 0
+//
+//
+//        }
+//        }
+//    }
+    
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postCommentText: UITextView!
-    //@IBOutlet weak var postButton: UIButton!
-    
     
     @IBAction func postButtonClicked(_ sender: Any) {
         
-     let object = PFObject(className: "Posts")
-
-        let data = UIImageJPEGRepresentation(postImage.image!, 0.5)
-        let pfImage = PFFile(name: "image.jpg", data: data!)
-
-        object["postimage"] = pfImage
-        object["postcomment"] = postCommentText.text
-        object["postowner"] = PFUser.current()!.username!
-
-       let uuid = UUID().uuidString
-
-       object["postuuid"] = "\(uuid) \(PFUser.current()!.username!)"
-
-       object.saveInBackground { (success, error) in
-        if error != nil{
-            
-            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
-            let okButton = UIAlertAction(title: "OK", style:UIAlertActionStyle.cancel, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
-        }
-        else{
-            self.postCommentText.text = ""
-            self.postImage.image = UIImage(named: "select.png")
-            self.tabBarController?.selectedIndex = 0
-            
-            
-        }
-        }
+        
     }
-    
 }
 

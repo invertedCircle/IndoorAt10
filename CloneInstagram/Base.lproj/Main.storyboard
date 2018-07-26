@@ -53,9 +53,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wHR-Po-hVg">
-                                <rect key="frame" x="67" y="109" width="240" height="128"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ut-rB-3oi">
                                 <rect key="frame" x="67" y="245" width="240" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,32 +62,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hju-Sc-gAK">
-                                <rect key="frame" x="269" y="302" width="31" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VCx-5t-H1R">
+                                <rect key="frame" x="67" y="269" width="240" height="57"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ino-ki-Fgj">
+                                <rect key="frame" x="275" y="300" width="31" height="30"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
-                                    <action selector="postButtonClicked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="7nS-0o-Lnf"/>
+                                    <action selector="postButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Uza-eU-pZ1"/>
+                                    <action selector="postButtonClicked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="neg-f5-D3Q"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n5O-cy-eqg">
+                                <rect key="frame" x="67" y="109" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wHR-Po-hVg" firstAttribute="leading" secondItem="2Ut-rB-3oi" secondAttribute="leading" id="533-FP-wwd"/>
-                            <constraint firstItem="wHR-Po-hVg" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="67" id="9ul-0t-e94"/>
-                            <constraint firstItem="hju-Sc-gAK" firstAttribute="top" secondItem="2Ut-rB-3oi" secondAttribute="bottom" constant="8" symbolic="YES" id="HrT-W8-SA9"/>
-                            <constraint firstItem="hju-Sc-gAK" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="269" id="Qqf-IP-iyu"/>
-                            <constraint firstItem="wHR-Po-hVg" firstAttribute="trailing" secondItem="2Ut-rB-3oi" secondAttribute="trailing" id="VSn-kw-cYy"/>
-                            <constraint firstItem="wHR-Po-hVg" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="45" id="XBT-Ro-o9o"/>
-                            <constraint firstItem="wHR-Po-hVg" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Xwi-YX-TDI"/>
-                            <constraint firstItem="2Ut-rB-3oi" firstAttribute="top" secondItem="wHR-Po-hVg" secondAttribute="bottom" constant="8" symbolic="YES" id="dAv-96-pSf"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="hju-Sc-gAK" secondAttribute="bottom" constant="286" id="xiG-Pb-uEy"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="VCx-5t-H1R" secondAttribute="bottom" constant="292" id="4s5-dz-y93"/>
+                            <constraint firstItem="n5O-cy-eqg" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="45" id="6dU-hD-ek4"/>
+                            <constraint firstItem="ino-ki-Fgj" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="269" id="FsD-Ww-ZDW"/>
+                            <constraint firstItem="VCx-5t-H1R" firstAttribute="top" secondItem="n5O-cy-eqg" secondAttribute="bottom" constant="32" id="ItJ-Wx-Tjx"/>
+                            <constraint firstItem="n5O-cy-eqg" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="67" id="Rmx-cF-z0X"/>
+                            <constraint firstItem="n5O-cy-eqg" firstAttribute="leading" secondItem="2Ut-rB-3oi" secondAttribute="leading" id="UEi-Ya-e1I"/>
+                            <constraint firstItem="n5O-cy-eqg" firstAttribute="trailing" secondItem="2Ut-rB-3oi" secondAttribute="trailing" id="d1E-7t-HFw"/>
+                            <constraint firstItem="2Ut-rB-3oi" firstAttribute="leading" secondItem="VCx-5t-H1R" secondAttribute="leading" id="dlz-Ll-inQ"/>
+                            <constraint firstItem="2Ut-rB-3oi" firstAttribute="top" secondItem="n5O-cy-eqg" secondAttribute="bottom" constant="8" symbolic="YES" id="fhw-zB-MzR"/>
+                            <constraint firstItem="VCx-5t-H1R" firstAttribute="bottom" secondItem="ino-ki-Fgj" secondAttribute="bottom" id="geD-AI-ihj"/>
+                            <constraint firstItem="ino-ki-Fgj" firstAttribute="top" secondItem="2Ut-rB-3oi" secondAttribute="bottom" constant="2" id="kcn-V4-gik"/>
+                            <constraint firstItem="n5O-cy-eqg" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="vp7-k8-fm2"/>
+                            <constraint firstItem="2Ut-rB-3oi" firstAttribute="trailing" secondItem="VCx-5t-H1R" secondAttribute="trailing" id="yBR-nY-nwS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Upload A Post" id="iui-qc-nLV"/>
                     <connections>
-                        <outlet property="postButton" destination="hju-Sc-gAK" id="r5H-sm-GEe"/>
-                        <outlet property="postImage" destination="wHR-Po-hVg" id="HwC-Qc-Xhq"/>
+                        <outlet property="postCommentText" destination="VCx-5t-H1R" id="Srx-8K-o9e"/>
+                        <outlet property="postImage" destination="n5O-cy-eqg" id="2Co-Tv-pTB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
