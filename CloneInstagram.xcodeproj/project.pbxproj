@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		395967732B65B208C6E647BB /* Pods_CloneInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E510D4FFBF3E6D8E8D6603D6 /* Pods_CloneInstagram.framework */; };
+		851DEC76210A5451009625E2 /* FeedTableVCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851DEC75210A5451009625E2 /* FeedTableVCont.swift */; };
+		851DEC78210A54AF009625E2 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851DEC77210A54AF009625E2 /* FeedTableViewCell.swift */; };
 		85D11161210779A0006F6B22 /* Logo1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D11160210779A0006F6B22 /* Logo1024.png */; };
 		A332FB665E982C912093FD2A /* Pods_CloneInstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57716D77BBA7240BFE368EAB /* Pods_CloneInstagramTests.framework */; };
 		A359A18C923193327D74ED50 /* Pods_CloneInstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72250BCD4E6104F83927FAA /* Pods_CloneInstagramUITests.framework */; };
@@ -44,6 +46,8 @@
 		4D119286A34C7BEDB3A25C92 /* Pods-CloneInstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneInstagramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloneInstagramUITests/Pods-CloneInstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		57716D77BBA7240BFE368EAB /* Pods_CloneInstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneInstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		713BC76F82A4F538F8BB167C /* Pods-CloneInstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneInstagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloneInstagramTests/Pods-CloneInstagramTests.release.xcconfig"; sourceTree = "<group>"; };
+		851DEC75210A5451009625E2 /* FeedTableVCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableVCont.swift; sourceTree = "<group>"; };
+		851DEC77210A54AF009625E2 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		85D11160210779A0006F6B22 /* Logo1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo1024.png; sourceTree = "<group>"; };
 		A16F93F2DE97439E7A076725 /* Pods-CloneInstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneInstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloneInstagram/Pods-CloneInstagram.release.xcconfig"; sourceTree = "<group>"; };
 		A72250BCD4E6104F83927FAA /* Pods_CloneInstagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneInstagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +138,8 @@
 				CC86A34620F55E930077DFD9 /* FeedVC.swift */,
 				CC86A34820F55E930077DFD9 /* UploadVC.swift */,
 				CC86A34A20F55E930077DFD9 /* Main.storyboard */,
+				851DEC77210A54AF009625E2 /* FeedTableViewCell.swift */,
+				851DEC75210A5451009625E2 /* FeedTableVCont.swift */,
 				CC86A37820F5857E0077DFD9 /* SignInVC.swift */,
 				CC86A34D20F55E940077DFD9 /* Assets.xcassets */,
 				85D11160210779A0006F6B22 /* Logo1024.png */,
@@ -388,7 +394,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC86A34920F55E930077DFD9 /* UploadVC.swift in Sources */,
+				851DEC78210A54AF009625E2 /* FeedTableViewCell.swift in Sources */,
 				CC86A34520F55E930077DFD9 /* AppDelegate.swift in Sources */,
+				851DEC76210A5451009625E2 /* FeedTableVCont.swift in Sources */,
 				CC86A37920F5857E0077DFD9 /* SignInVC.swift in Sources */,
 				CC86A34720F55E930077DFD9 /* FeedVC.swift in Sources */,
 			);
@@ -565,6 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M5NU4Q3WB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Bolts\"",
@@ -572,6 +581,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CloneInstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M5NU4Q3WB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Bolts\"",
@@ -596,6 +607,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CloneInstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
